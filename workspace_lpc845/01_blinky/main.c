@@ -1,20 +1,25 @@
-#include "board.h"
-//hola
-#define Led_BLUE  GPIO 1, 1
-#define delay(t)  for (uint32_t i = 0; i < t; i++)
+#include "board.h" 
+
+#define LED_BLUE GPIO, 1, 1
+#define delay(t) for (uint32_t i = 0; i < t; i++)
 
 
-int main(void){
-    //Incializo puerto 1
+int main (void) {
+
+    // Inicializo Puerto
     GPIO_PortInit(GPIO, 1);
-    //Inicializo pin como salida
-    gpio_pin_config_t out_config = {.pinDirection = kGPIO_DigitalOutput, .outputLogic = 1};
-    GPIO_PinInit(Led_BLUE, &out_config);
+    gpio_pin_config_t out_config = { .pinDirection = kGPIO_DigitalOutput, .outputLogic = 1};
 
-    while(1){
+    // Inicializo Pin como Salida
+    GPIO_PinInit(GPIO, 1, 1, &out_config);
 
-        GPIO_PinWrite(Led_BLUE, !GPIO_PinRead(Led_BLUE));
-        for(uint32_t i = 0; i < 50000; i++);
+    while(1) {
+
+        GPIO_PinWrite(LED_BLUE, 1);
+        delay(150000);
+        GPIO_PinWrite(LED_BLUE, 0);
+        delay(150000);
+
     }
     return 0;
 }
