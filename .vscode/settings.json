@@ -1,0 +1,4 @@
+{
+    "cmake.sourceDirectory": "C:/Users/valentin/OneDrive/Documentos/GitHub/curso-lse/workspace_lpc845/01_blinky/armgcc",
+    "idf.portWin": "COM7"
+}
