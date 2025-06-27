@@ -12,14 +12,15 @@
 #define _WRAPPERS_H_
 
 // Estructura para los GPIO
-typedef struct {
+typedef struct
+{
 	GPIO_Type *gpio;
 	uint32_t port;
 	uint32_t pin;
 } gpio_t;
 
 // Macro para facilitar el uso de la estructura gpio_t
-#define GPIO_DESTRUCT(x)	x.gpio, x.port, x.pin
+#define GPIO_DESTRUCT(x) x.gpio, x.port, x.pin
 
 // Prototipos
 void wrapper_adc_init(void);
@@ -39,7 +40,8 @@ float wrapper_bh1750_read(void);
 /**
  * @brief Wrapper para inicializacion de puerto
  */
-static inline void wrapper_gpio_init(uint8_t port) {
+static inline void wrapper_gpio_init(uint8_t port)
+{
 	GPIO_PortInit(GPIO, port);
 }
 
@@ -48,9 +50,10 @@ static inline void wrapper_gpio_init(uint8_t port) {
  * @param btn estructura a gpio del boton
  * @return estado del pin
  */
-static inline bool wrapper_btn_get(gpio_t btn) {
+static inline bool wrapper_btn_get(gpio_t btn)
+{
 
-	return (bool) GPIO_PinRead(GPIO_DESTRUCT(btn));
+	return (bool)GPIO_PinRead(GPIO_DESTRUCT(btn));
 }
 
 /**
@@ -58,9 +61,10 @@ static inline bool wrapper_btn_get(gpio_t btn) {
  * @param led estructura de GPIO para la salida
  * @param default_output true para salida en high al habilitarlo
  */
-static inline void wrapper_output_init(gpio_t led, bool default_output) {
+static inline void wrapper_output_init(gpio_t led, bool default_output)
+{
 
-	GPIO_PinInit(GPIO_DESTRUCT(led), &(gpio_pin_config_t){ kGPIO_DigitalOutput, default_output });
+	GPIO_PinInit(GPIO_DESTRUCT(led), &(gpio_pin_config_t){kGPIO_DigitalOutput, default_output});
 }
 
 /**
@@ -68,8 +72,9 @@ static inline void wrapper_output_init(gpio_t led, bool default_output) {
  * @param gpio estructura de GPIO
  * @return número de puerto
  */
-static inline uint32_t wrapper_gpio_get_port(gpio_t gpio) {
-	
+static inline uint32_t wrapper_gpio_get_port(gpio_t gpio)
+{
+
 	return gpio.port;
 }
 
@@ -78,7 +83,8 @@ static inline uint32_t wrapper_gpio_get_port(gpio_t gpio) {
  * @param gpio estructura de GPIO
  * @return número de pin
  */
-static inline uint32_t wrapper_gpio_get_pin(gpio_t gpio) {
+static inline uint32_t wrapper_gpio_get_pin(gpio_t gpio)
+{
 
 	return gpio.pin;
 }
@@ -87,7 +93,8 @@ static inline uint32_t wrapper_gpio_get_pin(gpio_t gpio) {
  * @brief Wrapper para conmutar una salida
  * @param output estructura a GPIO de salida
  */
-static inline void wrapper_output_toggle(gpio_t output) {
+static inline void wrapper_output_toggle(gpio_t output)
+{
 	// Leo el pin y se invierte
 	GPIO_PortToggle(GPIO, wrapper_gpio_get_port(output), 1 << wrapper_gpio_get_pin(output));
 }
@@ -95,7 +102,8 @@ static inline void wrapper_output_toggle(gpio_t output) {
 /**
  * @brief Wrapper para apagar ambos displays
  */
-static inline void wrapper_display_off(void) {
+static inline void wrapper_display_off(void)
+{
 	// Pongo en uno ambos ánodos
 	GPIO_PinWrite(COM_1, 1);
 	GPIO_PinWrite(COM_2, 1);
@@ -105,7 +113,8 @@ static inline void wrapper_display_off(void) {
  * @brief Wrapper para prender el dígito del display
  * @param com estructura a pin conectado al comun del display
  */
-static inline void wrapper_display_on(gpio_t com) {
+static inline void wrapper_display_on(gpio_t com)
+{
 	// Pongo un cero en el anodo
 	GPIO_PinWrite(GPIO_DESTRUCT(com), 0);
 }
@@ -113,7 +122,8 @@ static inline void wrapper_display_on(gpio_t com) {
 /**
  * @brief Wrapper para prender ambos dígitos
  */
-static inline void wrapper_display_on_both(void) {
+static inline void wrapper_display_on_both(void)
+{
 	// Pongo un cero en ambos ánodos
 	wrapper_display_on((gpio_t){COM_1});
 	wrapper_display_on((gpio_t){COM_2});
@@ -122,10 +132,12 @@ static inline void wrapper_display_on_both(void) {
 /**
  * @brief Wrapper para apagar todos los segmentos
  */
-static inline void wrapper_display_segments_off(void) {
+static inline void wrapper_display_segments_off(void)
+{
 	// Pongo un uno en cada segmento
-	gpio_t pins[] = { {SEG_A}, {SEG_B}, {SEG_C}, {SEG_D}, {SEG_E}, {SEG_F}, {SEG_G} };
-	for(uint8_t i = 0; i < sizeof(pins) / sizeof(gpio_t); i++) {
+	gpio_t pins[] = {{SEG_A}, {SEG_B}, {SEG_C}, {SEG_D}, {SEG_E}, {SEG_F}, {SEG_G}};
+	for (uint8_t i = 0; i < sizeof(pins) / sizeof(gpio_t); i++)
+	{
 		GPIO_PinWrite(GPIO_DESTRUCT(pins[i]), 1);
 	}
 }
@@ -134,7 +146,8 @@ static inline void wrapper_display_segments_off(void) {
  * @brief Wrapper para prender el segmento indicado
  * @param gpio estructura a gpio del segmento
  */
-static inline void wrapper_display_segment_on(gpio_t gpio) {
+static inline void wrapper_display_segment_on(gpio_t gpio)
+{
 	// Pongo un cero en el segmento indicado
 	GPIO_PinWrite(GPIO_DESTRUCT(gpio), 0);
 }

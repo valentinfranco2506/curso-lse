@@ -34,6 +34,6 @@ status_t BOARD_InitDebugConsole(void)
     assert(kStatus_Success == result);
     return result;
 #else
-    return kStatus_Success;
+ return kStatus_Success;
 #endif
 }
