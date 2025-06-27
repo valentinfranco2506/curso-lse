@@ -17,6 +17,7 @@
 #define tskIntensity_PRIORITY (tskIDLE_PRIORITY + 1UL) // Tarea de RV22
 #define tskBuzzer_PRIORITY (tskIDLE_PRIORITY + 3UL)    // Tarea del Sensor IR
 #define tskTerminal_PRIORITY (tskIDLE_PRIORITY + 1UL)
+#define tskADC_PRIORITY (tskIDLE_PRIORITY + 1UL)
 
 // Stack size de las tareas (Tamaño de la pila de cada tarea)
 #define tskINIT_STACK                (3 * configMINIMAL_STACK_SIZE)
