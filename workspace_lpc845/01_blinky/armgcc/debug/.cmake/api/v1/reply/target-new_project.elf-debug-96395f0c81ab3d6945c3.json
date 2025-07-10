@@ -25,7 +25,7 @@
 		[
 			"CMakeLists.txt",
 			"C:/Users/valentin/OneDrive/Documentos/GitHub/curso-lse/workspace_lpc845/sdks/01_blinky_sdk/tools/cmake_toolchain_files/armgcc.cmake",
-			"C:/Users/valentin/.mcuxpressotools/cmake-3.30.0-windows-x86_64/share/cmake-3.30/Modules/CMakeDetermineSystem.cmake",
+			"debug/CMakeFiles/3.30.0/CMakeSystem.cmake",
 			"C:/Users/valentin/OneDrive/Documentos/GitHub/curso-lse/workspace_lpc845/sdks/01_blinky_sdk/tools/cmake_toolchain_files/mcux_config.cmake",
 			"C:/Users/valentin/OneDrive/Documentos/GitHub/curso-lse/workspace_lpc845/sdks/01_blinky_sdk/CMSIS/Core/Include/CMSIS_Include_core_cm.cmake",
 			"C:/Users/valentin/OneDrive/Documentos/GitHub/curso-lse/workspace_lpc845/sdks/01_blinky_sdk/devices/LPC845/all_lib_device.cmake",
@@ -71,7 +71,7 @@
 			{
 				"command" : 2,
 				"file" : 2,
-				"line" : 146,
+				"line" : 6,
 				"parent" : 3
 			},
 			{
@@ -570,7 +570,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "    -fstack-usage  -D__NEWLIB__  -fstack-usage  -D__NEWLIB__       -O0 -g -O0 -g     -include C:/Users/valentin/OneDrive/Documentos/GitHub/curso-lse/workspace_lpc845/01_blinky/armgcc/../mcux_config.h     -DDEBUG     -DMCUX_META_BUILD     -DMCUXPRESSO_SDK     -DCPU_LPC845M301JBD48     -g     -O0     --specs=nano.specs     -Wall     -fno-common     -ffunction-sections     -fdata-sections     -fno-builtin     -mthumb     -mapcs     -std=gnu99     -mcpu=cortex-m0plus     -mfloat-abi=soft     -DSDK_DEBUGCONSOLE=1 "
+					"fragment" : "   -fstack-usage  -D__NEWLIB__       -O0 -g -O0 -g -O0 -g     -include C:/Users/valentin/OneDrive/Documentos/GitHub/curso-lse/workspace_lpc845/01_blinky/armgcc/../mcux_config.h     -DDEBUG     -DMCUX_META_BUILD     -DMCUXPRESSO_SDK     -DCPU_LPC845M301JBD48     -g     -O0     --specs=nano.specs     -Wall     -fno-common     -ffunction-sections     -fdata-sections     -fno-builtin     -mthumb     -mapcs     -std=gnu99     -mcpu=cortex-m0plus     -mfloat-abi=soft     -DSDK_DEBUGCONSOLE=1 "
 				}
 			],
 			"includes" : 
@@ -648,7 +648,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "    -fstack-usage  -D__NEWLIB__  -fstack-usage  -D__NEWLIB__       -g -g     -D__STARTUP_CLEAR_BSS     -DMCUXPRESSO_SDK     -DCPU_LPC845M301JBD48     -g     -mthumb     -mcpu=cortex-m0plus     -mfloat-abi=soft "
+					"fragment" : "   -fstack-usage  -D__NEWLIB__       -g -g -g     -D__STARTUP_CLEAR_BSS     -DMCUXPRESSO_SDK     -DCPU_LPC845M301JBD48     -g     -mthumb     -mcpu=cortex-m0plus     -mfloat-abi=soft "
 				}
 			],
 			"includes" : 
@@ -707,7 +707,7 @@
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "-fstack-usage  -D__NEWLIB__  -fstack-usage  -D__NEWLIB__       -O0 -g -O0 -g     -include C:/Users/valentin/OneDrive/Documentos/GitHub/curso-lse/workspace_lpc845/01_blinky/armgcc/../mcux_config.h     -DDEBUG     -DMCUX_META_BUILD     -DMCUXPRESSO_SDK     -DCPU_LPC845M301JBD48     -g     -O0     --specs=nano.specs     -Wall     -fno-common     -ffunction-sections     -fdata-sections     -fno-builtin     -mthumb     -mapcs     -std=gnu99     -mcpu=cortex-m0plus     -mfloat-abi=soft     -DSDK_DEBUGCONSOLE=1",
+				"fragment" : "-fstack-usage  -D__NEWLIB__       -O0 -g -O0 -g -O0 -g     -include C:/Users/valentin/OneDrive/Documentos/GitHub/curso-lse/workspace_lpc845/01_blinky/armgcc/../mcux_config.h     -DDEBUG     -DMCUX_META_BUILD     -DMCUXPRESSO_SDK     -DCPU_LPC845M301JBD48     -g     -O0     --specs=nano.specs     -Wall     -fno-common     -ffunction-sections     -fdata-sections     -fno-builtin     -mthumb     -mapcs     -std=gnu99     -mcpu=cortex-m0plus     -mfloat-abi=soft     -DSDK_DEBUGCONSOLE=1",
 				"role" : "flags"
 			},
 			{
