@@ -144,4 +144,3 @@ void BOARD_BootClockPll24M(void);
 #endif /* __cplusplus*/
 
 #endif /* _CLOCK_CONFIG_H_ */
-

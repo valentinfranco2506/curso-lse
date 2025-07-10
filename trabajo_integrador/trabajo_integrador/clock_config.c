@@ -230,4 +230,3 @@ void BOARD_BootClockPll24M(void)
     /*!< Set SystemCoreClock variable. */
     SystemCoreClock = BOARD_BOOTCLOCKPLL24M_CORE_CLOCK;
 }
-
