@@ -1,11 +1,11 @@
 Aqui se encontre el informe final en formato IEEE y el diagrama de codigos 
 
-| Integrantes |
+| Integrantes      |
 ------------------
 | Erbino Sebastian |
-| Franco Valentin |
-| Lesme Franco |
-------------
+| Franco Valentin  |
+| Lesme Franco n   |
+----
 
 [Informe Final](Diagrama_de_codigo.jpeg)
 
