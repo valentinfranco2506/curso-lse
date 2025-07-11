@@ -1,3 +1,3 @@
 # Trabajo Integrador
 
-Este espacio es para subir la resolución del trabajo integrador del curso.
+En este espacio se subira el informe acerca del desarrolo del curso de Sistemas Embebidos
