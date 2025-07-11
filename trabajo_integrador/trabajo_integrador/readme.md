@@ -4,8 +4,8 @@ Aqui se encontre el informe final en formato IEEE y el diagrama de codigos
 ------------------
 | Erbino Sebastian |
 | Franco Valentin  |
-| Lesme Franco n   |
-----
+| Lesme Franco     |
+
 
 [Informe Final](Diagrama_de_codigo.jpeg)
 
