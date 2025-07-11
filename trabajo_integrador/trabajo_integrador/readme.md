@@ -1,7 +1,7 @@
 Aqui se encontre el informe final en formato IEEE y el diagrama de codigos 
 
 | Integrantes      |
-------------------
+|------------------|
 | Erbino Sebastian |
 | Franco Valentin  |
 | Lesme Franco     |
